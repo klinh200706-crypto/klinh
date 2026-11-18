@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siêu nhân giải cứu thế giới - Toán 6</title>
+<style>
+:root{--navy:#172554;--blue:#2563eb;--cyan:#38bdf8;--yellow:#facc15;--pink:#fb7185;--purple:#8b5cf6;--green:#16a34a;--ink:#172033}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(135deg,#dbeafe,#fce7f3 55%,#fef3c7);min-height:100vh}
+button{font:inherit;cursor:pointer;border:0}.wrap{max-width:1050px;margin:auto;padding:22px}.panel{background:#ffffffed;border:2px solid #fff;border-radius:26px;box-shadow:0 16px 40px #1e3a8a20;padding:clamp(20px,4vw,38px)}
+.hero{text-align:center;position:relative;overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;opacity:.22;filter:blur(2px)}.hero:before{width:220px;height:220px;background:#60a5fa;top:-100px;left:-60px}.hero:after{width:200px;height:200px;background:#facc15;right:-70px;bottom:-100px}
+.kicker{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:7px 14px;border-radius:99px;font-weight:800;font-size:.85rem;letter-spacing:.04em}
+h1{font-size:clamp(2rem,6vw,3.8rem);line-height:1.05;color:#1e3a8a;margin:18px 0 12px;text-shadow:2px 3px #bfdbfe}.subtitle{font-size:1.1rem;max-width:720px;margin:0 auto 22px;line-height:1.6}
+.superhero{font-size:clamp(4rem,12vw,7rem);margin:12px 0;filter:drop-shadow(0 8px 4px #1e3a8a25)}
+.btn{padding:13px 22px;border-radius:14px;font-weight:850;transition:.18s;box-shadow:0 5px 0 #1e40af30}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(120deg,#2563eb,#7c3aed);color:white}.gold{background:linear-gradient(120deg,#facc15,#fb923c);color:#422006}.soft{background:#e0e7ff;color:#1e40af}.danger{background:#ffe4e6;color:#9f1239}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.hidden{display:none!important}.maphead,.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+h2{color:#1e3a8a;margin:0 0 10px;font-size:clamp(1.5rem,4vw,2rem)}h3{margin:0 0 7px}.muted{color:#64748b}.mapgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.stage{border:2px solid #dbeafe;border-radius:20px;padding:20px;background:linear-gradient(145deg,#fff,#eff6ff);display:flex;gap:14px;align-items:center}.stage .emoji{font-size:2.5rem}.stage p{margin:4px 0;color:#64748b;font-size:.92rem}.stage .status{font-size:.8rem;font-weight:800;color:#2563eb}.stage.locked{opacity:.55;filter:grayscale(.5)}.stage.done{border-color:#86efac;background:#f0fdf4}
+.stats{display:flex;gap:10px;flex-wrap:wrap}.pill{background:#eff6ff;border-radius:99px;padding:8px 13px;font-weight:800;color:#1e40af}
+.progress{height:12px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin:10px 0 22px}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#38bdf8,#8b5cf6,#facc15);transition:width .3s}
+.questionbox{background:#f8fafc;border:2px solid #dbeafe;border-radius:20px;padding:clamp(18px,3vw,28px)}.qnum{color:#7c3aed;font-weight:900;font-size:.9rem}.question{font-size:clamp(1.15rem,3vw,1.45rem);font-weight:800;line-height:1.5;margin:10px 0 20px}
+.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.answer{text-align:left;padding:15px;border:2px solid #cbd5e1;background:white;border-radius:14px;font-weight:700;min-height:58px;color:#1e293b}.answer:hover:not(:disabled){border-color:#60a5fa;background:#eff6ff}.answer:disabled{cursor:default}.answer.correct{background:#dcfce7;border-color:#22c55e;color:#166534}.answer.wrong{background:#ffe4e6;border-color:#fb7185;color:#9f1239}
+.feedback{margin-top:16px;border-radius:14px;padding:14px 16px;line-height:1.55}.feedback.good{background:#dcfce7;color:#14532d}.feedback.bad{background:#fff1f2;color:#881337}.feedback strong{display:block;margin-bottom:4px}
+.bossbar{background:#fee2e2;border-radius:99px;height:15px;overflow:hidden;margin:8px 0 18px}.bossbar div{height:100%;background:linear-gradient(90deg,#fb7185,#dc2626);transition:width .3s}
+.result{text-align:center}.bigscore{font-size:3rem;font-weight:950;color:#2563eb}.badgegrid{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0}.medal{background:#fef3c7;border:2px solid #facc15;border-radius:16px;padding:12px 15px;font-weight:800}
+ul.review{text-align:left;display:inline-block;line-height:1.8}.small{font-size:.9rem}
+@media(max-width:650px){.wrap{padding:12px}.mapgrid,.answers{grid-template-columns:1fr}.stage{padding:15px}.panel{border-radius:20px}.topline{align-items:flex-start}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section id="home" class="panel hero">
+ <span class="kicker">PHIÊU LƯU TOÁN HỌC • LỚP 6</span>
+ <div class="superhero">🦸‍♀️⚡🌍</div>
+ <h1>SIÊU NHÂN<br>GIẢI CỨU THẾ GIỚI</h1>
+ <p class="subtitle">Chúa Tể Bóng Tối đã phong ấn hành tinh Toán Học! Hãy vận dụng kiến thức về <b>ước chung, ƯCLN, bội chung và BCNN</b> để vượt qua 4 vùng thử thách và giải cứu thế giới.</p>
+ <div class="actions"><button class="btn primary" id="startBtn">🚀 BẮT ĐẦU GIẢI CỨU</button><button class="btn soft" id="guideBtn">📘 HƯỚNG DẪN CHƠI</button></div>
+ <div id="guide" class="feedback hidden" style="text-align:left;max-width:720px;margin:20px auto 0"><b>Cách chơi:</b> Chọn một đáp án trong 4 lựa chọn. Nếu sai, em được thử lại nhưng không nhận điểm ở câu đó. Trả lời đúng lần đầu được 10 điểm. Hoàn thành mỗi ải để nhận huy hiệu và mở khóa thử thách tiếp theo. Có tất cả 25 câu hỏi.</div>
+</section>
+
+<section id="map" class="panel hidden">
+ <div class="maphead"><div><span class="kicker">BẢN ĐỒ NHIỆM VỤ</span><h2>Chọn hành trình của em</h2><p class="muted">Hoàn thành lần lượt các vùng đất để mở cánh cổng cuối cùng.</p></div><div class="stats"><span class="pill">⭐ Điểm: <b id="mapScore">0</b></span><span class="pill">🏅 Huy hiệu: <b id="mapBadges">0/4</b></span></div></div>
+ <div id="stageGrid" class="mapgrid"></div>
+ <div class="actions"><button class="btn soft" id="homeBtn">⌂ Trang chủ</button></div>
+</section>
+
+<section id="game" class="panel hidden">
+ <div class="topline"><div><span class="kicker" id="levelTag">ẢI 1</span><h2 id="levelTitle">Rừng Ước Số</h2></div><div class="stats"><span class="pill">⭐ <span id="score">0</span> điểm</span><span class="pill">Câu <span id="qIndex">1</span>/<span id="qTotal">5</span></span></div></div>
+ <div class="progress"><div id="progressFill"></div></div>
+ <div id="bossArea" class="hidden"><div class="topline"><b>👹 Năng lượng Chúa Tể Bóng Tối</b><b id="bossText">5/5</b></div><div class="bossbar"><div id="bossFill" style="width:100%"></div></div></div>
+ <div class="questionbox"><div class="qnum" id="qTopic">THỬ THÁCH KIẾN THỨC</div><div class="question" id="question"></div><div class="answers" id="answers"></div><div id="feedback" class="hidden"></div></div>
+ <div class="actions"><button id="continueBtn" class="btn primary hidden">TIẾP TỤC ➜</button><button id="mapReturn" class="btn soft">BẢN ĐỒ NHIỆM VỤ</button></div>
+</section>
+
+<section id="result" class="panel result hidden">
+ <div class="superhero">🏆🌟🦸</div><span class="kicker">NHIỆM VỤ HOÀN TẤT</span><h2 id="resultTitle">Thế giới đã được giải cứu!</h2>
+ <p id="resultMessage">Em đã đánh bại Chúa Tể Bóng Tối.</p><div class="bigscore"><span id="finalScore">0</span><small style="font-size:1rem"> / 250 điểm</small></div>
+ <div class="stats" style="justify-content:center"><span class="pill">✅ Đúng lần đầu: <b id="firstCorrect">0</b>/25</span><span class="pill">🏅 Huy hiệu: <b id="finalBadges">0</b>/4</span></div>
+ <div class="badgegrid" id="medals"></div><h3 id="rank"></h3><p id="reviewText"></p><div id="reviewList"></div>
+ <div class="actions"><button class="btn primary" id="restartBtn">🔄 CHƠI LẠI</button><button class="btn soft" id="resultMapBtn">XEM BẢN ĐỒ</button></div>
+</section>
+</main>
+<script>
+const stages=[
+ {name:"Rừng Ước Số",emoji:"🌳",desc:"Nhận diện ước và ước chung",topic:"ƯỚC CHUNG",qs:[
+  ["Số nào sau đây là ước của 24? ",["5","6","7","9"],1,"Vì 24 : 6 = 4 nên 6 là ước của 24. Các số 5, 7, 9 không chia hết 24."],
+  ["Tập hợp nào gồm tất cả các ước chung của 12 và 18?",["{1; 2; 3; 6}","{1; 2; 3; 4; 6}","{1; 2; 6; 9}","{2; 3; 6; 12}"],0,"Ư(12) = {1; 2; 3; 4; 6; 12}; Ư(18) = {1; 2; 3; 6; 9; 18}. Giao của hai tập hợp là {1; 2; 3; 6}."],
+  ["Số nào vừa là ước của 20, vừa là ước của 30?",["4","5","6","8"],1,"5 chia hết cả 20 và 30 nên là ước chung của hai số."],
+  ["Số nào sau đây là ước chung của 16 và 24 nhưng KHÔNG phải là ước của 12?",["2","4","8","1"],2,"8 là ước của 16 và 24, nhưng 12 không chia hết cho 8. Các số 1, 2, 4 đều là ước của 12."],
+  ["Nếu a là ước chung của 15 và 25 thì khẳng định nào đúng?",["15 chia hết cho a và 25 chia hết cho a","a chia hết cho 15 và 25","a lớn hơn cả 15 và 25","15 + 25 chia hết cho a luôn đúng với mọi a"],0,"Theo định nghĩa, a là ước chung khi a là ước của cả hai số, tức 15 và 25 đều chia hết cho a."]
+ ]},
+ {name:"Núi Sức Mạnh",emoji:"⛰️",desc:"Chinh phục ước chung lớn nhất",topic:"ƯỚC CHUNG LỚN NHẤT",qs:[
+  ["ƯCLN(18, 24) bằng bao nhiêu?",["3","6","8","12"],1,"Ư(18) ∩ Ư(24) = {1; 2; 3; 6}. Ước chung lớn nhất là 6."],
+  ["Phân tích 36 và 48 ra thừa số nguyên tố. ƯCLN(36, 48) là:",["12","24","36","48"],0,"36 = 2² × 3²; 48 = 2⁴ × 3. Lấy các thừa số chung với số mũ nhỏ nhất: 2² × 3 = 12."],
+  ["ƯCLN(24, 36, 60) bằng:",["6","12","18","24"],1,"24 = 2³×3; 36 = 2²×3²; 60 = 2²×3×5. ƯCLN = 2²×3 = 12."],
+  ["Có 24 bút chì và 36 quyển vở. Muốn chia thành nhiều phần quà giống nhau nhất, không thừa đồ vật nào, có thể chia nhiều nhất bao nhiêu phần?",["6","8","12","18"],2,"Số phần quà nhiều nhất là ƯCLN(24, 36) = 12. Mỗi phần có 2 bút chì và 3 quyển vở."],
+  ["Hai số có ƯCLN bằng 7. Khẳng định nào chắc chắn đúng?",["Cả hai số đều chia hết cho 7","Cả hai số đều bằng 7","Tổng hai số bằng 7","Một số chia hết cho số kia"],0,"ƯCLN bằng 7 nghĩa là 7 là ước chung lớn nhất, nên cả hai số đều chia hết cho 7."]
+ ]},
+ {name:"Thành Phố Bội Số",emoji:"🏙️",desc:"Nhận diện bội và bội chung",topic:"BỘI CHUNG",qs:[
+  ["Số nào sau đây là bội của 7?",["30","35","40","45"],1,"35 = 7 × 5 nên 35 là bội của 7."],
+  ["Số nào là bội chung của 4 và 6?",["18","20","24","28"],2,"24 = 4 × 6 và 24 = 6 × 4 nên 24 là bội chung của 4 và 6."],
+  ["Các bội chung dương của 3 và 5 nhỏ hơn 40 là:",["15; 30","10; 20; 30","15; 25; 35","30"],0,"BC(3,5) gồm các bội của 15. Các bội dương nhỏ hơn 40 là 15 và 30."],
+  ["Trong các số 12, 18, 24, 30, số nào là bội chung của 6 và 8?",["12","18","24","30"],2,"Bội chung của 6 và 8 phải chia hết cho cả 6 và 8. Chỉ có 24 thỏa mãn."],
+  ["Nếu m là bội chung của 5 và 8 thì m có tính chất nào?",["m chia hết cho 5 và 8","5 và 8 chia hết cho m","m luôn bằng 40","m là số nguyên tố"],0,"m là bội chung khi m là bội của cả 5 và 8, tức m chia hết cho cả hai số."]
+ ]},
+ {name:"Cổng Thời Gian",emoji:"🌀",desc:"Chinh phục BCNN và bài toán thực tế",topic:"BỘI CHUNG NHỎ NHẤT",qs:[
+  ["BCNN(6, 8) bằng bao nhiêu?",["12","18","24","48"],2,"Bội chung dương nhỏ nhất của 6 và 8 là 24."],
+  ["Phân tích 12 và 18 ra thừa số nguyên tố. BCNN(12, 18) là:",["2 × 3","2² × 3²","2² × 3","2 × 3²"],1,"12 = 2²×3; 18 = 2×3². Lấy mỗi thừa số nguyên tố với số mũ lớn nhất: 2²×3² = 36."],
+  ["BCNN(4, 6, 10) bằng:",["30","60","120","240"],1,"4 = 2²; 6 = 2×3; 10 = 2×5. BCNN = 2²×3×5 = 60."],
+  ["Một đèn nháy 6 giây một lần, đèn khác nháy 8 giây một lần. Nếu cùng nháy lúc này, sau ít nhất bao lâu chúng lại cùng nháy?",["14 giây","24 giây","36 giây","48 giây"],1,"Thời điểm cùng nháy tiếp theo ứng với BCNN(6,8) = 24 giây."],
+  ["Hai xe buýt cùng rời bến lúc 7 giờ. Một xe cứ 12 phút rời bến, xe kia cứ 18 phút rời bến. Hai xe lại cùng rời bến lúc mấy giờ?",["7 giờ 18 phút","7 giờ 24 phút","7 giờ 30 phút","7 giờ 36 phút"],3,"BCNN(12,18) = 36 phút. Sau 36 phút kể từ 7 giờ là 7 giờ 36 phút."]
+ ]},
+ {name:"Trận chiến cuối cùng",emoji:"👹",desc:"Tổng hợp kiến thức để đánh bại Chúa Tể Bóng Tối",topic:"THỬ THÁCH TỔNG HỢP",qs:[
+  ["ƯCLN(28, 42) bằng bao nhiêu?",["7","14","21","28"],1,"Ước chung lớn nhất của 28 và 42 là 14."],
+  ["BCNN(9, 12) bằng bao nhiêu?",["18","24","36","108"],2,"9 = 3²; 12 = 2²×3. BCNN = 2²×3² = 36."],
+  ["Cần chia đều 30 quả cam và 45 quả quýt thành các túi giống nhau, không thừa quả nào. Số túi nhiều nhất là:",["5","10","15","30"],2,"Đây là bài toán chia thành nhiều nhóm giống nhau nhất nên dùng ƯCLN(30,45) = 15."],
+  ["Hai chuông reo lần lượt sau mỗi 10 phút và 15 phút. Nếu vừa reo cùng lúc, sau bao lâu chúng lại cùng reo?",["5 phút","25 phút","30 phút","150 phút"],2,"Các lần reo trùng nhau sau BCNN(10,15) = 30 phút."],
+  ["Muốn tìm thời điểm các hoạt động lặp lại cùng lúc, thường cần tìm:",["Ước chung","ƯCLN","Bội chung nhỏ nhất","Số nguyên tố"],2,"Thời điểm lặp lại đồng thời là bội chung nhỏ nhất của các chu kì."]
+ ]}
+];
+let score=0,firstCorrect=0,badges=0,currentStage=0,qPos=0,answered=false,stageDone=[false,false,false,false],wrongTopics={};
+const $=id=>document.getElementById(id);
+function show(id){["home","map","game","result"].forEach(x=>$(x).classList.toggle("hidden",x!==id))}
+function renderMap(){
+ $("mapScore").textContent=score;$("mapBadges").textContent=badges+"/4";
+ $("stageGrid").innerHTML=stages.slice(0,4).map((s,i)=>`<div class="stage ${stageDone[i]?"done":i>0&&!stageDone[i-1]?"locked":""}"><div class="emoji">${stageDone[i]?"🏅":s.emoji}</div><div style="flex:1"><h3>Ải ${i+1}: ${s.name}</h3><p>${s.desc}</p><div class="status">${stageDone[i]?"✓ ĐÃ HOÀN THÀNH":i===0||stageDone[i-1]?"🔓 SẴN SÀNG":"🔒 CHƯA MỞ KHÓA"}</div></div><button class="btn ${i===0||stageDone[i-1]?"primary":"soft"}" ${i>0&&!stageDone[i-1]?"disabled":""} onclick="startStage(${i})">${stageDone[i]?"Chơi lại":"Vào ải"}</button></div>`).join("");
+ if(stageDone.every(Boolean)){$("stageGrid").innerHTML+=`<div class="stage" style="grid-column:1/-1;border-color:#facc15"><div class="emoji">👹</div><div style="flex:1"><h3>Trận chiến cuối cùng</h3><p>Đánh bại Chúa Tể Bóng Tối bằng kiến thức tổng hợp!</p></div><button class="btn gold" onclick="startStage(4)">ĐỐI ĐẦU</button></div>`}
+}
+function startStage(i){if(i>0&&i<4&&!stageDone[i-1])return;if(i===4&&!stageDone.every(Boolean))return;currentStage=i;qPos=0;show("game");$("bossArea").classList.toggle("hidden",i!==4);renderQuestion()}
+function renderQuestion(){
+ const s=stages[currentStage],q=s.qs[qPos];answered=false;
+ $("levelTag").textContent=currentStage===4?"TRẬN CHIẾN CUỐI":"ẢI "+(currentStage+1);
+ $("levelTitle").textContent=s.name;$("qTopic").textContent=s.topic;
+ $("qIndex").textContent=qPos+1;$("qTotal").textContent=s.qs.length;
+ $("progressFill").style.width=(qPos/s.qs.length*100)+"%";
+ $("question").textContent=q[0];$("feedback").className="hidden";$("feedback").innerHTML="";$("continueBtn").classList.add("hidden");
+ $("answers").innerHTML=q[1].map((a,i)=>`<button class="answer" onclick="chooseAnswer(${i})"><b>${"ABCD"[i]}.</b> ${a}</button>`).join("");
+ if(currentStage===4){$("bossText").textContent=(5-qPos)+"/5";$("bossFill").style.width=((5-qPos)/5*100)+"%"}
+}
+function chooseAnswer(i){
+ if(answered)return;const q=stages[currentStage].qs[qPos],buttons=[...$("answers").children],fb=$("feedback");
+ if(i===q[2]){
+  answered=true;buttons.forEach((b,j)=>{b.disabled=true;if(j===i)b.classList.add("correct")});
+  score+=10;firstCorrect++;fb.className="feedback good";fb.innerHTML="<strong>⚡ Chính xác! Em đã đánh bại một tên lính Bóng Tối!</strong>"+q[3]+"<br><b>+10 điểm</b>";
+  $("continueBtn").classList.remove("hidden");$("continueBtn").textContent=qPos===4?(currentStage===4?"XEM KẾT QUẢ":"HOÀN THÀNH ẢI"):"TIẾP TỤC ➜";
+ }else{
+  buttons[i].classList.add("wrong");buttons[i].disabled=true;fb.className="feedback bad";fb.innerHTML="<strong>💡 Chưa chính xác! Hãy suy nghĩ lại nhé.</strong>Em hãy xem lại kiến thức và chọn một phương án khác. Lần trả lời lại không được cộng điểm.";
+  wrongTopics[stages[currentStage].topic]=(wrongTopics[stages[currentStage].topic]||0)+1;
+ }
+ $("score").textContent=score;
+}
+function nextQuestion(){
+ if(qPos<4){qPos++;renderQuestion();return}
+ $("progressFill").style.width="100%";
+ if(currentStage<4){if(!stageDone[currentStage]){stageDone[currentStage]=true;badges++}renderMap();show("map")}
+ else finishGame();
+}
+function finishGame(){
+ show("result");$("finalScore").textContent=score;$("firstCorrect").textContent=firstCorrect;$("finalBadges").textContent=badges;
+ $("resultTitle").textContent="🌍 Thế giới đã được giải cứu!";
+ $("resultMessage").textContent="Em đã vượt qua mọi thử thách và đánh bại Chúa Tể Bóng Tối!";
+ $("medals").innerHTML=stages.slice(0,4).map((s,i)=>`<div class="medal">${s.emoji} Huy hiệu ${i+1}</div>`).join("");
+ let rank=score>=220?"🏆 Siêu nhân huyền thoại":score>=180?"🥇 Siêu nhân xuất sắc":score>=130?"🥈 Siêu nhân tiềm năng":"🛡️ Chiến binh tập sự";
+ $("rank").textContent=rank;
+ const topics=Object.entries(wrongTopics).sort((a,b)=>b[1]-a[1]);
+ $("reviewText").textContent=topics.length?"Em nên ôn tập thêm những nội dung sau:":"Tuyệt vời! Em không có câu trả lời sai nào cần lưu ý.";
+ $("reviewList").innerHTML=topics.length?`<ul class="review">${topics.map(([t,n])=>`<li>${t} (${n} lượt chọn sai)</li>`).join("")}</ul>`:"";
+}
+$("startBtn").onclick=()=>{show("map");renderMap()};
+$("guideBtn").onclick=()=>$("guide").classList.toggle("hidden");
+$("homeBtn").onclick=()=>show("home");$("mapReturn").onclick=()=>{renderMap();show("map")};
+$("continueBtn").onclick=nextQuestion;$("restartBtn").onclick=()=>{score=0;firstCorrect=0;badges=0;stageDone=[false,false,false,false];wrongTopics={};renderMap();show("map")};
+$("resultMapBtn").onclick=()=>{renderMap();show("map")};
+renderMap();
+</script>
+</body></html>
